@@ -1,0 +1,10 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: imagePullPolicy
+spec:
+ containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always
