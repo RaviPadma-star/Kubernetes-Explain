@@ -5,7 +5,7 @@ metadata:
  labels:
   course: Kubernates
   duration: 25hr
-  Timing: 1 to 2 pm
+  Timing: 2pm
 spec:
  containers:
  - name: nginx
