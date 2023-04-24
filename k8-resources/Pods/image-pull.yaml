@@ -3,9 +3,9 @@ kind: Pod
 metadata:
   name: nginx
 spec:
-  containers:
-    - image: nginx
-      imagePullPolicy: Always
-      name: nginx
-      ports:
-      - containerPort: 80
+ containers:
+ - image: nginx
+   imagePullPolicy: Always
+   name: nginx
+   ports:
+    - containerPort: 80
