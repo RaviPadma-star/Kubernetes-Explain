@@ -5,14 +5,13 @@ metadata:
   name: cpu-mem-limit-range
 spec:
   limits:
-  - default: # this section defines default limits
-      cpu: 100m
-    defaultRequest: # this section defines default requests
-      cpu: 100m
-    max: # max and min define the limit range
-      cpu: "2"
-    min:
-      cpu: 100m
+   resources:
+    requests: 
+     memory: '64Mi'
+     cpu: '250m'
+    limits:
+     memory: '200Mi'
+     cpu: '500m'
     type: Container
 ---
 apiVersion: v1
