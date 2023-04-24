@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: label-pod
+ labels:
+  course: Kubernates
+  duration: 25hr
+  Timing: 1 to 2 pm
+spec:
+ container:
+  - name: nginx
+    image: nginx
+    
