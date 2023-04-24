@@ -6,10 +6,10 @@ metadata:
 spec:
   limits:
   - max:
-      cpu: "2"
-      memory: 2Gi
+      cpu: "200Mi"
+      memory: "250m"
     min:
-      cpu: "200m"
+      cpu: "64Mi"
       memory: 100Mi
     type: Container
 ---
