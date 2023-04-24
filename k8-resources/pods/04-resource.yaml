@@ -7,12 +7,12 @@ metadata:
  name: resource
 spec:
  containers:
-  - name: nginx
-    image: nginx
-    resources:
-     requests:
-      memory: '64Mi'
-      cpu: '250m'
-     limits:
-      memory: '200mi'
-      cpu: '500m'
+ - name: nginx
+   image: nginx
+   resources:
+    requests:
+     memory: '64Mi'
+     cpu: '250m'
+    limits:
+     memory: '200mi'
+     cpu: '500m'
