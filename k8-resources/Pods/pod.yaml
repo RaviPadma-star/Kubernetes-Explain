@@ -5,6 +5,7 @@ kind: Pod
 metadata:
 
   name: nginx
+  namespace: roboshop
 
 spec:
 
