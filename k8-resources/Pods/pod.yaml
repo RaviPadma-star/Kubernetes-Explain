@@ -10,7 +10,7 @@ spec:
 
   containers:
 
-  - name: nginx
+  - name: roboshop
 
     image: nginx:1.14.2
 
