@@ -6,11 +6,11 @@ metadata:
 spec:
   limits:
   - max:
-      cpu: "200Mi"
-      memory: "250m"
-    min:
       cpu: "64Mi"
-      memory: 100Mi
+      memory: "100Mi"
+    min:
+      cpu: "200Mi"
+      memory: "500m"
     type: Container
 ---
 apiVersion: v1
