@@ -1,6 +1,3 @@
-# resource yaml file is nothing but linit and request the containers
-# 1cpu = 1000mi
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -10,7 +7,7 @@ spec:
  - name: nginx
    image: nginx
    resources:
-    requests:
+    requests: 
      memory: '64Mi'
      cpu: '250m'
     limits:
