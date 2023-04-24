@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: imagePull
+ name: imagepulling
 spec:
  containers:
   - name: nginx
