@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kubernates-demo
+data:
+  # this is key value pair
+  course: kubernates
+  durarion: 25hr
+  time: 7pm
+  date: 26-aug
