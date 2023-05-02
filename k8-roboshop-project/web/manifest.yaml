@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    name: web-service
+    tier: frontend
+spec:
+  containers:
+    - name: webcontainer
+      image: padmaravi/web:k8
+      ports:
+        containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-nginx-service
+spec:
+  type: LoadBalancer
+  selector:
+    name: web-service
+    tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
