@@ -10,7 +10,7 @@ spec:
   containers:
     - name: catalogue
       imagePullPolicy: Always
-      image: padmaravi/catalogue:kube8
+      image:  padmaravi/catalogue:v2
       resources:
         requests:
           cpu: "100m"
