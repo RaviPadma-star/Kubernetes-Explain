@@ -31,5 +31,5 @@ spec:
     tier: database
   ports:
     - protocol: TCP
-      port: 27017
+      port: 80
       targetPort: 27017
