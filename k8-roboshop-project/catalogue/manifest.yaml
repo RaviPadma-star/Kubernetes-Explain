@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: catalogue
+  labels:
+    name: catalogue
+    tier: middleware
+spec:
+  containers:
+    - name: catalogue
+      imagePullPolicy: Always
+      image: padmaravi/catalogue:robo
+      resources:
+        requests:
+          cpu: "100m"
+          memory: "128Mi"
+        limits:
+          cpu: "100m"
+          memory: "128Mi"
+      ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalogue-service
+spec:
+  selector:
+    name: catalogue
+    tier: middleware
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
