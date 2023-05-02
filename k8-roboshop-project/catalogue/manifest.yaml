@@ -26,7 +26,6 @@ kind: Service
 metadata:
   name: catalogue-service
 spec:
-  type: LoadBalancer
   selector:
     name: catalogue
     tier: middleware
