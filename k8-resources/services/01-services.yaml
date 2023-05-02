@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    server: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    server: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      target: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+  labels:
+    server: debug
+spec:
+  containers:
+    - name: almalinux
+      image: almalinux
+      command: ["sleep", "10000000"]
