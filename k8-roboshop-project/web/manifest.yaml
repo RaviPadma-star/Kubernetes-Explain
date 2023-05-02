@@ -9,6 +9,7 @@ metadata:
 spec:
   containers:
     - name: webcontainer
+      imagePullPolicy: Always
       image: padmaravi/web:k8
       ports:
         containerPort: 80
