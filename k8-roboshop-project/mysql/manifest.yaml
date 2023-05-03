@@ -13,8 +13,8 @@ metadata:
   name: mysql-secrets
 type: Opaque
 data:
-  MYSQL_USER: "c2hpcHBpbmc="
-  MYSQL_PASSWORD: "c2VjcmV0"
+  MYSQL_USER: c2hpcHBpbmc=
+  MYSQL_PASSWORD: c2VjcmV0
 
 ---
 apiVersion: v1
@@ -38,11 +38,11 @@ spec:
        - containerPort: 3306
       resources:
         requests:
-          cpu: "100m"
-          memory: "128Mi"
+          cpu: "300m"
+          memory: "528Mi"
         limits:
-          cpu: "100m"
-          memory: "128Mi"
+          cpu: "300m"
+          memory: "528Mi"
 ---
 apiVersion: v1
 kind: Service

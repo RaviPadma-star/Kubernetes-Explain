@@ -17,7 +17,7 @@ spec:
   containers:
   - name: catalogue
     imagePullPolicy: Always
-    image: padmaravi/catalogue:k81
+    image: padmaravi/catalogue:k8
     envFrom:
     - configMapRef:
         name: catalogue-config
