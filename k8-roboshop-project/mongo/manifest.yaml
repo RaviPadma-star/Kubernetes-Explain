@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mangodb
+  name: mongo
   labels:
-    name: mangodb
+    name: mongodb
     tier: database
 spec:
   containers:
-    - name: mangodb
+    - name: mongo
       imagePullPolicy: Always
       image: padmaravi/mongo:newv3
       resources:
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mangodb-service
+  name: mongodb-service
 spec:
   selector:
-    name: mangodb
+    name: mongodb
     tier: database
   ports:
     - protocol: TCP
