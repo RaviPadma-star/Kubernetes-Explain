@@ -10,7 +10,7 @@ spec:
   containers:
     - name: catalogue
       imagePullPolicy: Always
-      image: padmaravi/catalogue:kubenew
+      image:  padmaravi/catalogue:k8-9
       resources:
         requests:
           cpu: "100m"
@@ -18,8 +18,7 @@ spec:
         limits:
           cpu: "100m"
           memory: "128Mi"
-      ports:
-        - containerPort: 80
+      
 ---
 apiVersion: v1
 kind: Service
