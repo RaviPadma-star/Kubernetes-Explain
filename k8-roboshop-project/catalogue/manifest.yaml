@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: catalogue-config
 data:
-  MONGO_URL: "mongodb://mongodb:80/catalogue"
+  MONGO_URL: "mongodb://mongodb:27017/catalogue"
 ---
 apiVersion: v1
 kind: Pod
@@ -17,7 +17,7 @@ spec:
   containers:
   - name: catalogue
     imagePullPolicy: Always
-    image: padmaravi/catalogue:k8
+    image: padmaravi/catalogue:k8 
     envFrom:
     - configMapRef:
         name: catalogue-config
@@ -40,4 +40,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 27017
