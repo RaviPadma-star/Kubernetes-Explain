@@ -29,6 +29,11 @@ spec:
     - name: mysql
       imagePullPolicy: Always
       image: padmaravi/mysql:robo
+      envFrom:
+    - configMapRef:
+        name: mysql-config
+    - secretKeyRef:
+        name: mysql-secrets
       resources:
         requests:
           cpu: "100m"
