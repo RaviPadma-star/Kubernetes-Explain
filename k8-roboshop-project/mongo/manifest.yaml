@@ -10,7 +10,7 @@ spec:
   containers:
     - name: mangodb
       imagePullPolicy: Always
-      image: padmaravi/mongo:robo
+      image: padmaravi/mongo:newv3
       resources:
         requests:
           cpu: "100m"

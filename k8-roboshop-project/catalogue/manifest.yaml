@@ -10,7 +10,7 @@ spec:
   containers:
     - name: catalogue
       imagePullPolicy: Always
-      image: padmaravi/catalogue:newv2
+      image: padmaravi/catalogue:newv3
       resources:
         requests:
           cpu: "100m"
