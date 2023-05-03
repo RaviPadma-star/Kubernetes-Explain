@@ -30,9 +30,9 @@ spec:
       imagePullPolicy: Always
       image: padmaravi/mysql:robo
       envFrom:
-    - configMapRef:
+      - configMapRef:
         name: mysql-config
-    - secretKeyRef:
+      - secretKeyRef:
         name: mysql-secrets
       ports:
        - containerPort: 3306
