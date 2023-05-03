@@ -31,9 +31,9 @@ spec:
       image: padmaravi/mysql:robo
       envFrom:
       - configMapRef:
-        name: mysql-config
+         name: mysql-config
       - secretRef:
-        name: mysql-secrets
+         name: mysql-secrets
       ports:
        - containerPort: 3306
       resources:
