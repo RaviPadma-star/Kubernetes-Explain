@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: mysql-config
 data:
-  MYSQL_ALLOW_EMPTY_PASSWORD: yes
+  MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
   MYSQL_DATABASE: cities
 ---
 apiVersion: v1
