@@ -32,7 +32,7 @@ spec:
       envFrom:
       - configMapRef:
         name: mysql-config
-      - secretKeyRef:
+      - secretRef:
         name: mysql-secrets
       ports:
        - containerPort: 3306
