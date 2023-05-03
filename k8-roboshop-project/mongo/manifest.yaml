@@ -10,7 +10,7 @@ spec:
   containers:
     - name: mongo
       imagePullPolicy: Always
-      image: padmaravi/mongo:kubenew
+      image: padmaravi/mongo:robo
       resources:
         requests:
           cpu: "100m"
