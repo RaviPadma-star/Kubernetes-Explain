@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: catalogue-config
 data:
-  MONGO_URL: 'mongodb://mongodb-service:80/catalogue'
+  MONGO_URL: 'mongodb://mongodb-service:27017/catalogue'
 ---
 apiVersion: v1
 kind: Pod
@@ -39,5 +39,5 @@ spec:
     tier: app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 27017
+      targetPort: 27017
