@@ -19,7 +19,7 @@ spec:
   containers:
   - name: cart
     imagePullPolicy: Always
-    image: padmaravi/catalogue:robo
+    image: padmaravi/catalogue:k89
     envFrom:
     - configMapRef:
         name: cart-config
