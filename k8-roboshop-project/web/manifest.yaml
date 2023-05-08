@@ -10,7 +10,7 @@ spec:
   containers:
     - name: web
       imagePullPolicy: Always
-      image: padmaravi/web:k18
+      image: padmaravi/web:k18new
       resources:
         requests:
           cpu: "100m"
