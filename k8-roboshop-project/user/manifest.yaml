@@ -18,7 +18,7 @@ spec:
   containers:
   - name: user
     imagePullPolicy: Always
-    image: padmaravi/user:robo
+    image: padmaravi/user:k89
     envFrom:
     - configMapRef:
         name: user-config
