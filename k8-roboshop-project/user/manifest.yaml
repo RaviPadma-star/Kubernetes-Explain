@@ -2,25 +2,26 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: catalogue-config
+  name: user-config
 data:
   MONGO_URL: 'mongodb://mongodb-service:27017/catalogue'
+  REDIS_HOST: "redis"
 ---
 apiVersion: v1
 kind: Pod
 metadata:
-  name: catalogue
+  name: user
   labels:
-    name: catalogue
+    name: user
     tier: app
 spec:
   containers:
-  - name: catalogue
+  - name: user
     imagePullPolicy: Always
-    image: padmaravi/catalogue:k89
+    image: padmaravi/user:k89
     envFrom:
     - configMapRef:
-        name: catalogue-config
+        name: user-config
     resources:
       requests:
         cpu: "100m"
@@ -32,12 +33,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalogue
+  name: user
 spec:
   selector:
-    name: catalogue
+    name: user
     tier: app
   ports:
     - protocol: TCP
-      port: 27017
-      targetPort: 27017
+      port: 80
+      targetPort: 8080
